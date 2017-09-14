@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+ <html ng-app="ToDo">
+ 	<head>
+ 		<meta charset="utf-8">
+ 		<title> to do list </title>
+ 		<script src="angular.min.js"></script>
+ 		<script src="controller.js"></script>
+ 		<link rel="stylesheet" type="text/css" href="style.css">
+ 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+ 	</head>
+
+ 	<body class="background">
+ 		<h1 class="text-center"> To do list </h1>
+ 		<hr>
+ 		<div class = "contenu">
+	 		<div ng-controller="TaskCtrl">
+	 			<div class = "center">
+	 			<input ng-model="taskName" class="text" placeholder="Saisir une tache"/>
+	 			<button class="button" name="button" ng-click="addTask()">Ajouter tache</button>
+	 			<button class="button" name="BtnDeleteAllTask" ng-click="deleteAllTask()">Supprimer Tout</button>
+	 			</div>
+				<div ng-repeat = "task in tasks">
+			 		<a ng-click = "isFavorit($index)" ng-class = " {'fa fa-star' : task.favorit === true , 'fa fa-star-o' : task.favorit === false}"></a>
+					<table> 
+						<strong>{{task.taskName}} </strong> 
+						<button class="button margin" name="BtnDeleteTask" ng-click="deleteTask($index)">Supprimer</button>
+						<input class = "text margin" ng-model = "subTaskName">
+						<button class="button margin" name="BtnAddSubTask" ng-click="addSubTask($index, subTaskName)">Ajouter sous tache</button>
+						<ul ng-repeat= "subTask in task.subTask track by $index">
+						 	<button class="button" name="BtnDeleteSubTask" ng-click="deleteSubTask($index,$parent.$index)">Supprimer </button>
+							<li> {{subTask}} </li>
+						</ul>
+					</table>		
+		 		</div>
+		 	</div>
+ 		</div>
+ 	</body>
+
+ </html>

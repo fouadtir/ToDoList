@@ -1,0 +1,66 @@
+body {
+	height: 		790px;
+	width: 			960px;
+	margin: 		auto;
+	background: 	white		url(blue.jpg) no-repeat center;
+	font-family: herculanum;
+	 }
+
+
+#form
+{
+position: absolute;
+margin: auto;
+padding-top: 100px;
+font-family: herculanum;
+}
+
+.center{
+	margin-top:50px;
+	padding-left: 50px;
+	margin-left:250px;
+
+	display: block;
+}
+.text-center {
+	text-align: center; 
+}
+.button {
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 	6px;
+  
+}
+.text {
+	padding: 10px 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 	6px;
+    
+}
+
+.margin {
+	margin-top:5%;
+}
+
+
+
+
+.contenu {
+	padding-left: 	30px;
+	float: 			right;
+	width: 			928px;
+	border:			1px solid white;
+	height: 		550px;
+	border-radius: 	50px;
+	box-shadow: 	0px 5px 5px black;
+
+}
+
